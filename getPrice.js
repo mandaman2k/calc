@@ -42,8 +42,8 @@ setInterval(() => {
         });
     });
 
-    //LIZ KEC FLM PGN RVN
-    cbArray = ["LIZ", "KEC", "FLM", "PGN", "RVN", "SPD"];
+    //LIZ KEC FLM PGN RVN AXS
+    cbArray = ["LIZ", "KEC", "FLM", "PGN", "RVN", "SPD", "AXS"];
     rp({
         method: 'GET',
         uri: 'https://api.crypto-bridge.org/api/v1/ticker',
