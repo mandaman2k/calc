@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/getPrice', function (req, res) {
-    pool.query('SELECT name, coin, price FROM Coins', function (err, result, fields) {
+    pool.query('SELECT name, coin, CAST(price AS CHAR) price FROM Coins', function (err, result, fields) {
         if (err)
             throw err;
         res.json(result);
