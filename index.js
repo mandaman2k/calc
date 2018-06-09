@@ -22,4 +22,12 @@ app.get('/getbalance', function (req, res) {
     });
 });
 
+app.get('/getAll', function (req, res) {
+    pool.query('SELECT name, coin, balance, price FROM Coins', function (err, result, fields) {
+        if (err)
+            throw err;
+        res.json(result);
+    });
+});
+
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
